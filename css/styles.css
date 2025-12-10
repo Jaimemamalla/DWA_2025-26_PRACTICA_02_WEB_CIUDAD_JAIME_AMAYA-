@@ -80,10 +80,12 @@ ul {
     padding: 0.5rem 1rem;
     display: block;
     font-weight: 700;
+    transition: all 0.3s ease;
 }
 
 .main-nav a:hover {
     color: var(--color-primary);
+    transform: scale(1.1);
 }
 
 /* BOTÓN MENÚ MÓVIL */
