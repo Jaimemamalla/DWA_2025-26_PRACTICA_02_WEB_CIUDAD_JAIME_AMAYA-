@@ -102,53 +102,175 @@ ul {
 /* PORTADA */
 .hero-section {
     height: var(--header-height);
+    position: relative;
+    padding: 0;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: var(--color-white);
-    position: relative;
-    /* IMAGEN DE FONDO (FUTURO CARRUSEL) */ 
-    background: url('../media/portada.jpg') no-repeat center center/cover;
 }
 
-.hero-section::before {
-    content: '';
+/* SLIDESHOW */
+.slideshow-container {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    height: 100%; /* Obliga a ocupar todo el alto */
+    margin: 0;    /* Sin márgenes extraños */
+    padding: 0;
+    z-index: 0;
 }
 
+.mySlides {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+/* Imgs */
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CAPA OSCURA */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* TEXTO */
 .hero-content {
-    z-index: 1; 
-    max-width: 800px;
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
     padding: 20px;
+    animation: slideUp 1s ease-out;
 }
 
+/* TITULO PRINCIAPL */
 .hero-content h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* BOTONES */
+/* TEXTO ABAJO */
+.hero-content p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ANIMACIÓN */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* PUNTOS */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 3;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* BOTÓN  */
 .cta-button {
     display: inline-block;
-    background: var(--color-secondary);
-    color: var(--color-white);
-    padding: 10px 20px;
-    margin-top: 15px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    background-color: var(--color-secondary);
+    padding: 15px 35px;
+    font-size: 1.1rem;
     font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4); 
+    transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background: var(--color-secondary-hover);
+    background-color: var(--color-secondary-hover);
     color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(211, 84, 0, 0.5); 
+}
+
+/* PUNTOS */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    left: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+/* FADE */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 } 
+    to { opacity: 1 }
 }
 
 /*  FOOTER */
@@ -226,6 +348,41 @@ ul {
     }
     
     .hero-section {
-        height: 60vh; 
+        /* height: 60vh; */
+        min-height: 400px;
+
+    }
+
+    .hero-content {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+        overflow: hidden; 
+    }
+
+    .cta-button {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    .prev, .next {
+        padding: 8px;
+        font-size: 14px;
+        background-color: rgba(0,0,0,0.3);
+    }
+    
+    .slider-dots {
+        bottom: 15px; /* Un poco más pegados al borde */
     }
 }
