@@ -33,39 +33,79 @@
         </header>
 
         <main>
-        <section class="hero-section">
+            <section class="hero-section">
+                
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="media/slider1.webp" alt="Feria de Albacete">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="media/slider2.jpg" alt="Pasaje de Lodares">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="media/slider3.jpg" alt="Sierra del Segura">
+                    </div>
+                </div>
+
+                <div class="hero-overlay"></div>
+
+                <div class="hero-content">
+                    <h2>Descubre Albacete: Puerta de La Mancha</h2>
+                    <p>Visitas imprescindibles, gastronomía, actividades...</p>
+                    <a href="ciudad.html" class="cta-button">Ver Imprescindibles</a>
+                </div>
+
+                <div class="slider-dots">
+                    <span class="dot" onclick="currentDotSlide(0)"></span>
+                    <span class="dot" onclick="currentDotSlide(1)"></span>
+                    <span class="dot" onclick="currentDotSlide(2)"></span>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </section>
+        </main>
+
+        <section class="seccion-destacados container">
+            <h3 class="titulo-seccion">Explora lo mejor de Albacete</h3>
             
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="media/slider1.webp" alt="Feria de Albacete">
-                </div>
-                <div class="mySlides fade">
-                    <img src="media/slider2.jpg" alt="Pasaje de Lodares">
-                </div>
-                <div class="mySlides fade">
-                    <img src="media/slider3.jpg" alt="Sierra del Segura">
-                </div>
+            <div class="grid-tarjetas">
+                <article class="card">
+                    <img src="media/pasaje-lodares.jpg" alt="Pasaje de Lodares"> <div class="card-content">
+                        <h4>La Ciudad</h4>
+                        <p>Modernismo, compras y el famoso Pasaje de Lodares.</p>
+                        <a href="ciudad.html">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="media/nacimiento-riomundo.jpg" alt="Río Mundo">
+                    <div class="card-content">
+                        <h4>Naturaleza</h4>
+                        <p>Descubre los Chorros del Río Mundo y la Sierra.</p>
+                        <a href="provincia.html">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="media/miguelitos.jpg" alt="Gastronomía">
+                    <div class="card-content">
+                        <h4>Gastronomía</h4>
+                        <p>Gazpachos, atascaburras y los dulces de La Roda.</p>
+                        <a href="#">Saborear <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
             </div>
-
-            <div class="hero-overlay"></div>
-
-            <div class="hero-content">
-                <h2>Descubre Albacete: Puerta de La Mancha</h2>
-                <p>Visitas imprescindibles, gastronomía y los encantos de La Roda.</p>
-                <a href="ciudad.html" class="cta-button">Ver Imprescindibles</a>
-            </div>
-
-            <div class="slider-dots">
-                <span class="dot" onclick="currentDotSlide(0)"></span>
-                <span class="dot" onclick="currentDotSlide(1)"></span>
-                <span class="dot" onclick="currentDotSlide(2)"></span>
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
         </section>
-    </main>
+
+        <section class="banner-feria">
+            <div class="banner-content">
+                <h3>Feria de Albacete</h3>
+                <p>Declarada de Interés Turístico Internacional. Del 7 al 17 de septiembre.</p>
+                <a href="#" class="btn-blanco">Ver Agenda</a>
+            </div>
+        </section>
 
         <footer class="main-footer">
             <p>&copy; 2025 Albacete Turismo Web. | Proyecto DWA UDIT.</p>

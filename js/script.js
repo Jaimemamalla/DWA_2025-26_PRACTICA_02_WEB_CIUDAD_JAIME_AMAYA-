@@ -85,3 +85,28 @@ function startAutoSlide() {
 function stopAutoSlide() {
     clearInterval(autoSlideInterval);
 }
+
+// SLIDE TÁCTIL
+let touchStartX = 0;
+let touchEndX = 0;
+const sliderContainer = document.querySelector('.hero-section');
+
+sliderContainer.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+sliderContainer.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+});
+
+function handleGesture() {
+    //DESLIZAR IZQUIERDA
+    if (touchEndX < touchStartX - 50) { 
+        plusSlides(1);
+    }
+    //DESLIZAR DERECHA
+    if (touchEndX > touchStartX + 50) {
+        plusSlides(-1);
+    }
+}
