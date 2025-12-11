@@ -1,15 +1,12 @@
 /*  VARIABLES  */
 :root {
-    
     --color-primary: #0056b3;
     --color-secondary: #e67e22; 
     --color-secondary-hover: #d35400;
     --color-text-dark: #333333;
     --color-bg-light: #f4f4f4;
     --color-white: #ffffff;
-    
     --font-main: 'Roboto', sans-serif;
-    
     --header-height: 80vh;
 }
 
