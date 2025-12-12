@@ -1010,6 +1010,11 @@ ul {
     background-color: #f9f9f9;
 }
 
+.contact-form textarea {
+    resize: none;
+    height: 150px;
+}
+
 .contact-form input:focus, 
 .contact-form select:focus, 
 .contact-form textarea:focus {
@@ -1023,6 +1028,14 @@ ul {
     border: none;
     cursor: pointer;
     width: 100%; 
+}
+
+.contador-texto {
+    font-size: 0.85rem;
+    color: #888;
+    text-align: right;
+    margin-top: 5px;
+    font-weight: bold;
 }
 
 .info-column {

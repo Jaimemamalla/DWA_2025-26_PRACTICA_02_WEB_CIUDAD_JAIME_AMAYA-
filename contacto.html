@@ -67,7 +67,10 @@
 
                             <div class="form-group">
                                 <label for="mensaje">Mensaje</label>
-                                <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                                
+                                <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required maxlength="300"></textarea>
+                                
+                                <p id="contador" class="contador-texto">0 / 300</p>
                             </div>
 
                             <button type="submit" class="cta-button btn-submit">Enviar Mensaje</button>

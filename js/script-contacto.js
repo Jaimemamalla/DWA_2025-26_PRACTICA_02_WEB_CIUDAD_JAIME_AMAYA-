@@ -57,3 +57,21 @@ if (contactForm) {
         }, 1500);
     });
 }
+
+//CONTADOR
+const mensajeInput = document.getElementById("mensaje");
+const contadorOutput = document.getElementById("contador");
+
+if (mensajeInput && contadorOutput) {
+    
+    mensajeInput.addEventListener("input", function() {
+        let actual = mensajeInput.value.length;
+        contadorOutput.textContent = actual + " / 300";
+        
+        if (actual === 300) {
+            contadorOutput.style.color = "red";
+        } else {
+            contadorOutput.style.color = "#888";
+        }
+    });
+}
