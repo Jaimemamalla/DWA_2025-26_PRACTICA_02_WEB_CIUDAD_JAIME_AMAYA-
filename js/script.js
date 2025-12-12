@@ -111,6 +111,58 @@ function handleGesture() {
     }
 }
 
+//CLIMA 
+    document.addEventListener("DOMContentLoaded", function() {
+        const canvas = document.getElementById('graficoClima');
+        
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            
+            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            gradient.addColorStop(0, 'rgba(230, 126, 34, 0.6)'); 
+            gradient.addColorStop(1, 'rgba(230, 126, 34, 0.0)'); 
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'],
+                    datasets: [{
+                        label: 'Temp. Media (°C)',
+                        data: [5, 7, 10, 13, 17, 22, 26, 25, 21, 15, 9, 6],
+                        borderColor: '#e67e22',
+                        borderWidth: 3,
+                        backgroundColor: gradient,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#e67e22',
+                        pointRadius: 4,
+                        pointHoverRadius: 7,
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#333',
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + ' °C';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { grid: { display: false } },
+                        y: { border: { display: false }, grid: { borderDash: [5, 5] } }
+                    }
+                }
+            });
+        }
+    });
+
 //SECCIÓN FERIA 
 document.addEventListener('DOMContentLoaded', function() {
     

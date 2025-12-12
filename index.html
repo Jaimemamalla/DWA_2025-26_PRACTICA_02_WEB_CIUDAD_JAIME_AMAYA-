@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
         
@@ -153,20 +154,9 @@
                         </div>
                     </div>
 
-                    <div class="info-card weather-card">
-                        <div class="icon-circle">
-                            <i class="fa-solid fa-cloud-sun"></i>
-                        </div>
-                        <h4>El Clima</h4>
-                        <p>Clima continental: inviernos fríos y veranos calurosos.</p>
-                        <a href="http://www.aemet.es/es/eltiempo/prediccion/municipios/albacete-id02003" target="_blank" class="weather-btn">
-                            Ver Previsión AEMET <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-
                     <div class="info-card map-card">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.666993883866!2d-1.857685684648685!3d38.99537997955541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd665fc25c7e3e9d%3A0x7d6c6e7574b9e38!2sPlaza%20del%20Altozano%2C%20Albacete!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses" 
+                            src="https://maps.google.com/maps?q=Plaza+del+Altozano,+Albacete&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                             width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
                         </iframe>
                         <div class="map-overlay">
@@ -187,6 +177,25 @@
                     </div>
 
                 </div>
+
+                <div class="clima-container-integrado" style="margin-top: 50px;">
+                    <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.05);">
+                        
+                        <h4 style="text-align: center; font-size: 1.5rem; color: var(--color-primary); margin-bottom: 5px;">Climatología Anual</h4>
+                        <p style="text-align: center; color: #666; margin-bottom: 25px;">Temperatura media mensual en Albacete (°C)</p>
+                        
+                        <div style="position: relative; height: 350px; width: 100%;">
+                            <canvas id="graficoClima"></canvas>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 20px;">
+                            <a href="http://www.aemet.es/es/eltiempo/prediccion/municipios/albacete-id02003" target="_blank" style="color: var(--color-secondary); font-weight: bold; text-decoration: none;">
+                                Ver previsión de hoy en AEMET <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
