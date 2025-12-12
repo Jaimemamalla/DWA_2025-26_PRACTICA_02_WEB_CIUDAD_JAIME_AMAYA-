@@ -600,6 +600,7 @@ ul {
     text-transform: uppercase;
     letter-spacing: 1px;
     border-left: 3px solid var(--color-secondary);
+    padding-left: 15px;
 }
 
 .footer-col p {
@@ -664,6 +665,302 @@ ul {
     font-size: 0.85rem;
     border-top: 1px solid #333;
 }
+
+
+/* CIUDAD.HTML  */
+.page-header {
+    height: 50vh;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.capa-gris {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.85); 
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
+}
+
+.intro-text {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 4rem;
+}
+
+.intro-text h2 {
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.zigzag-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.zigzag-item {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.zigzag-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.zigzag-img {
+    flex: 1;
+    height: 400px;
+}
+
+.zigzag-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.zigzag-item:hover .zigzag-img img {
+    transform: scale(1.05);
+}
+
+.zigzag-text {
+    flex: 1;
+    padding: 3rem;
+}
+
+.zigzag-text h3 {
+    font-size: 2rem;
+    color: var(--color-text-dark);
+    margin: 10px 0 15px;
+}
+
+.zigzag-text p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.tag {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ocio-section {
+    background-color: var(--color-bg-light);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.ocio-section h3 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+}
+
+.grid-ocio {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ocio-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.ocio-card:hover {
+    transform: translateY(-5px);
+}
+
+.ocio-card i {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+/* PROVINCIA.HTML  */
+.naturaleza-highlight {
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 4rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.naturaleza-img {
+    flex: 1.5;
+    min-height: 400px;
+}
+
+.naturaleza-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.naturaleza-info {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.naturaleza-info h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.naturaleza-info p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.btn-line {
+    display: inline-block;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start;
+    transition: all 0.3s;
+}
+
+.btn-line:hover {
+    background: white;
+    color: var(--color-primary);
+}
+
+.pueblos-section {
+    padding-bottom: 4rem;
+}
+
+.grid-pueblos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 30px;
+}
+
+.pueblo-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.pueblo-card:hover {
+    transform: translateY(-8px);
+}
+
+.pueblo-img {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pueblo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.pueblo-card:hover .pueblo-img img {
+    transform: scale(1.1);
+}
+
+.badge-pueblo {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.pueblo-content {
+    padding: 20px;
+}
+
+.pueblo-content h4 {
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.pueblo-content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.pueblo-content a {
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.pueblo-content a:hover {
+    text-decoration: underline;
+}
+
 
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
@@ -789,5 +1086,38 @@ ul {
 
     .info-card {
         margin-bottom: 15px;
+    }
+
+    .header-content h1 { font-size: 2.5rem; }
+    
+    .zigzag-item, .zigzag-item.reverse {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .zigzag-img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .zigzag-text {
+        padding: 2rem 1.5rem;
+    }
+
+    .naturaleza-highlight {
+        flex-direction: column;
+    }
+
+    .naturaleza-img {
+        height: 250px;
+        min-height: auto;
+    }
+
+    .naturaleza-info {
+        padding: 2rem;
+    }
+
+    .naturaleza-info h3 {
+        font-size: 1.8rem;
     }
 }
