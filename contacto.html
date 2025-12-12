@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="media/logo-albacete-favicon.png">
+        <title>Contacto - Turismo Albacete</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    </head>
+    <body>
+
+        <header class="main-header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="media/logo-albacete.jpg" alt="Logotipo Albacete">
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ciudad.html">La Ciudad</a></li>
+                    <li><a href="provincia.html">La Provincia</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li> </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-header" style="background-image: url('media/bandera-albacete.jpg');">
+                <div class="capa-gris"></div>
+                <div class="header-content">
+                    <h1>¿Te ayudamos?</h1>
+                    <p>Contacta con la Oficina de Turismo o envíanos tus dudas.</p>
+                </div>
+            </section>
+
+            <section class="contacto-section container">
+                <div class="contacto-wrapper">
+                    
+                    <div class="form-column">
+                        <h3>Envíanos un mensaje</h3>
+                        <p>Rellena el formulario y te contestaremos lo antes posible.</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="asunto">Asunto</label>
+                                <select id="asunto" name="asunto">
+                                    <option value="info">Información General</option>
+                                    <option value="visitas">Reservar Visitas Guiadas</option>
+                                    <option value="sugerencia">Sugerencias</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                            </div>
+
+                            <button type="submit" class="cta-button btn-submit">Enviar Mensaje</button>
+                        </form>
+                    </div>
+
+                    <div class="info-column">
+                        <div class="info-box">
+                            <h3>Oficina de Turismo</h3>
+                            <p>Estamos en el corazón de la ciudad, en la mítica Plaza del Altozano.</p>
+                            
+                            <ul class="contact-details">
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <strong>Dirección:</strong>
+                                        <p>Plaza del Altozano, s/n<br>02001 Albacete</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div>
+                                        <strong>Teléfono:</strong>
+                                        <p><a href="tel:967630000">967 630 000</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <div>
+                                        <strong>Email:</strong>
+                                        <p><a href="mailto:info@turismoalbacete.es">info@turismoalbacete.es</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div>
+                                        <strong>Horario:</strong>
+                                        <p>Lunes a Domingo:<br>10:00 - 14:00 / 16:00 - 20:00</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="mapa-section">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.405786307689!2d-1.858066684646738!3d38.99566297955547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd665fc502781cc1%3A0x66f68e0d5402636f!2sPl.%20del%20Altozano%2C%20Albacete!5e0!3m2!1ses!2ses!4v1652345678901!5m2!1ses!2ses" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </section>
+
+        </main>
+
+        <footer class="main-footer">
+            <div class="container footer-grid">
+                
+                <div class="footer-col">
+                    <h3>Albacete Turismo</h3>
+                    <p>Tu guía oficial para descubrir los encantos de la capital y la provincia. Desde la Feria hasta la Sierra del Segura.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explora</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="ciudad.html">La Ciudad</a></li>
+                        <li><a href="provincia.html">La Provincia</a></li>
+                        <li><a href="https://www.feria-albacete.com/" target="_blank">Feria 2025</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Aviso Legal</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Turismo Albacete. Proyecto DWA UDIT.</p>
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/script-contacto.js"></script>
+    </body>
+</html>
