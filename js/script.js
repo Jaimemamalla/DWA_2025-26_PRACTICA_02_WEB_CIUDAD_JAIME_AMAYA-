@@ -110,3 +110,45 @@ function handleGesture() {
         plusSlides(-1);
     }
 }
+
+//SECCIÓN FERIA 
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const currentYear = new Date().getFullYear();
+    let feriaDate = new Date(`September 7, ${currentYear} 00:00:00`).getTime();
+    const now = new Date().getTime();
+
+    if (now > feriaDate) {
+        feriaDate = new Date(`September 7, ${currentYear + 1} 00:00:00`).getTime();
+    }
+
+    const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = feriaDate - now;
+
+        const elDias = document.getElementById("dias");
+        const elHoras = document.getElementById("horas");
+        const elMinutos = document.getElementById("minutos");
+        const elSegundos = document.getElementById("segundos");
+
+        if (!elDias || !elHoras || !elMinutos || !elSegundos) {
+            clearInterval(timer);
+            return;
+        }
+
+        const dias = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((distance % (1000 * 60)) / 1000);
+
+        elDias.innerText = dias < 10 ? "0" + dias : dias;
+        elHoras.innerText = horas < 10 ? "0" + horas : horas;
+        elMinutos.innerText = minutos < 10 ? "0" + minutos : minutos;
+        elSegundos.innerText = segundos < 10 ? "0" + segundos : segundos;
+
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("cuenta-atras").innerHTML = "<h3 style='margin:0'>¡Ya es Feria!</h3>";
+        }
+    }, 1000);
+});
